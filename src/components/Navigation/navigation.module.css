@@ -1,24 +1,28 @@
+.containerNavigation,
+.navigationItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .listHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: flex;
   gap: 20px;
   list-style: none;
   font-size: 14px;
-  font-weight: 500;
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 768px) {
-  .listHeader {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
 }
 
 .navLinkHeader {
   text-decoration: none;
   color: #aebbc3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+}
+
+.navLinkHeader:hover {
+  color: #fff;
 }

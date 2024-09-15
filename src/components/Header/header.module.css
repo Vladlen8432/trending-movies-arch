@@ -1,60 +1,61 @@
 .containerHeader {
   position: fixed;
-  width: 100%;
   top: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.headerItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #253339;
-  padding: 8px 18px;
-}
-
-/* @media screen and (min-width: 768px) {
-  .headerItem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #253339;
-    padding: 6px 40px;
-  }
-} */
-
-.mainLogo {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-transform: uppercase;
+  background-color: #253339;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logoStyled {
-  font-family: "Permanent Marker", cursive;
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.headerItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.headerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainLogo {
+  font-family: Permanent Marker, cursive;
+  font-size: 18px;
   text-decoration: none;
   color: #aebbc3;
-  font-size: 16px;
+  display: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
-  .logoStyled {
-    font-family: "Permanent Marker", cursive;
-    text-decoration: none;
-    color: #aebbc3;
+.mainLogo:hover {
+  color: #fff;
+}
+
+.mainLogoIcon {
+  color: #aebbc3;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .mainLogo {
+    display: block;
+  }
+
+  .mainLogoIcon {
+    display: none;
   }
 }
-
-/* .navLinkHeader {
-  text-decoration: none;
-  color: #aebbc3;
-}
-
-.listHeader {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  font-size: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-} */
