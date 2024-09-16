@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+import { IoSearchCircleSharp } from "react-icons/io5";
 import css from "./searchForm.module.css";
 
 const SearchForm = ({ onHandleSubmit }) => {
@@ -12,28 +14,24 @@ const SearchForm = ({ onHandleSubmit }) => {
       return alert("Cannot be empty");
     }
     onHandleSubmit(query);
+    setQuery("");
   };
   return (
     <div className={css.containerForm}>
-      <form onSubmit={handleSubmit} action="">
-        <input type="text" value={query} name="query" onChange={handleChange} />
-        <button type="submit">Search</button>
+      <form className={css.formItem} onSubmit={handleSubmit} action="">
+        <input
+          className={css.inputItem}
+          type="text"
+          value={query}
+          name="query"
+          onChange={handleChange}
+        />
+        <button className={css.buttonItem} type="submit">
+          <IoSearchCircleSharp className={css.buttonIcon} />
+        </button>
       </form>
     </div>
   );
 };
 
 export default SearchForm;
-
-// const SearchForm = () => {
-//   return (
-//     <div>
-//       <form action="">
-//         <input type="text" name="query" />
-//         <button type="submit">Search</button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default SearchForm;
